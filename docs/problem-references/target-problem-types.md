@@ -4,6 +4,23 @@ This document organizes the paper-problem families that are a good fit for the a
 
 The common theme is that the child learns by seeing a transformation, manipulating an object, or understanding a spatial relation that changes over time.
 
+## Progression
+
+The app should introduce problem families in this order:
+
+1. Stage 1: touch and understand
+2. Stage 2: match the example
+3. Stage 3: predict the result of a change
+4. Stage 4: answer in A/B/C or another paper-style format
+
+## Priority Overview
+
+- P0: Rotation
+- P0.5: Ferris Wheel / cyclic position tracking
+- P1: Mirror, Folding, Layering
+- P2: Water reflection, Shadow, Shape construction
+- P3: Dice net, Cross-section, Perspective / blocks
+
 ## Rotation
 
 ### Paper problem pattern
@@ -43,7 +60,7 @@ Show a wheel or loop and let the child advance items step by step to predict the
 
 ### Fit for current app
 
-- P1
+- P0.5
 
 ### Example source PDFs
 
@@ -87,7 +104,7 @@ Animate an object above a water line and let the child predict or build the refl
 
 ### Fit for current app
 
-- P1
+- P2
 
 ### Example source PDFs
 
@@ -132,7 +149,7 @@ Let the child stack shapes and peel them apart or reorder layers to match a targ
 
 ### Fit for current app
 
-- P2
+- P1
 
 ### Example source PDFs
 
@@ -177,7 +194,7 @@ Let the child fold a net into a cube in stages and compare the visible faces.
 
 ### Fit for current app
 
-- P2
+- P3
 
 ### Example source PDFs
 
@@ -199,7 +216,7 @@ Let the child move a cutting plane through a model and inspect the slice that ap
 
 ### Fit for current app
 
-- P2
+- P3
 
 ### Example source PDFs
 
@@ -244,7 +261,7 @@ Let the child rotate a block model, switch viewpoints, and compare the visible f
 
 ### Fit for current app
 
-- P2
+- P3
 
 ### Example source PDFs
 

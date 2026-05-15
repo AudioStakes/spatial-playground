@@ -20,8 +20,14 @@ Do not add the following unless explicitly requested.
 - Red error states
 - Forced speed or pressure
 - Complex menus
-- Multiple-choice answer UI for the current MVP
-- Submit buttons for the current MVP
+- Multiple-choice answer UI for the current Rotation Play MVP
+- Submit buttons for the current Rotation Play MVP
+- A/B/C answer UI in the current Rotation Play MVP
+
+Future direction:
+
+- The later Rotation Paper Bridge mode may explore A/B/C-style answering
+- That is not part of the current MVP
 
 ## Technical non-goals
 

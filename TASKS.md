@@ -2,10 +2,11 @@
 
 ## Current priorities
 
-1. Keep Rotation Game MVP stable.
-2. Keep quality checks fast and reliable.
-3. Add tests for pure game logic.
-4. Improve child-friendly interaction only when needed.
+1. Keep Rotation Play MVP stable.
+2. Prepare Rotation Paper Bridge.
+3. Keep quality checks fast and reliable.
+4. Add tests for pure game logic.
+5. Improve child-friendly interaction only when needed.
 
 ## Ready tasks
 
@@ -18,6 +19,16 @@ Scope:
 - Vitest
 - `rotationLogic.ts`
 - `rotationLogic.test.ts`
+
+### Prepare Rotation Paper Bridge
+
+Status: next
+
+Scope:
+
+- Predict what happens after one turn
+- Allow touch to verify when needed
+- Keep the path open for later A/B/C paper-style answering
 
 ### Improve target tap behavior
 
@@ -54,14 +65,20 @@ Status: deferred
 
 Candidates:
 
+- Ferris Wheel / cyclic position tracking
 - Mirror
 - Folding
-- Perspective
 - Layering
+- Water reflection
+- Shadow
+- Shape construction
+- Dice net
+- Cross-section
+- Perspective / blocks
 
 Reason:
 
-- Rotation MVP should be stabilized first
+- Rotation Play and Rotation Paper Bridge should be stabilized first
 
 ### Add parent dashboard
 

@@ -5,11 +5,13 @@
 `spatial-playground` is a browser-game learning app for children preparing for elementary school entrance exams.
 
 The product focuses on visual-spatial problems where understanding improves by watching movement, manipulating objects directly, and observing how shapes or spatial relationships change.
+The current app is not the paper problem itself. The current MVP is a Rotation Play game that helps children understand 90-degree rotation through touch before they move on to paper-style answering.
 The long-term goal is to help children build the ability to solve elementary-school entrance exam paper problems, but the app should stay focused on problems that become clearer when they are moved, touched, rotated, folded, or viewed in 3D.
 
 ## Repository Direction
 
-- The current MVP is the rotation game using arrows.
+- The current MVP is Rotation Play: touch an arrow and understand 90-degree rotation.
+- The next stage is Rotation Paper Bridge, which helps children predict what happens after one turn and prepares them for paper-style answering.
 - The product focuses on visual-spatial problems.
 - React Three Fiber is the primary 3D implementation layer.
 - Three.js is used for low-level geometry and scene control when needed.
@@ -32,6 +34,15 @@ Each mini game should generally follow this flow:
 
 The experience should feel like a game, but the interaction should deepen understanding rather than merely decorate a worksheet.
 
+## Problem Progression
+
+The app should teach visual-spatial problems in this order:
+
+1. `Stage 1`: touch and understand.
+2. `Stage 2`: match the example.
+3. `Stage 3`: predict the result of a change.
+4. `Stage 4`: answer in A/B/C or another paper-style format.
+
 ## Target Users
 
 Primary user:
@@ -47,13 +58,21 @@ Secondary user:
 
 ## MVP Scope
 
-The MVP implements only the first mini game: `Rotation Game`.
+The MVP implements only the first mini game: `Rotation Play`.
 
-### Rotation Game Summary
+### Rotation Play Summary
 
 The child sees a reference arrow and a target arrow.
 The child taps the target arrow to rotate it 90 degrees at a time.
 When the target arrow matches the reference arrow, the app automatically marks the question as correct and gives success feedback.
+This is a pre-paper bridge game, not a paper problem answering screen.
+
+### Next: Rotation Paper Bridge
+
+The next stage will bridge toward paper-style problems.
+
+The child predicts what happens after one turn, and can touch to verify if needed.
+This mode prepares the app for later A/B/C-style paper answering, but it should still stay simple and visual.
 
 ### MVP Session Flow
 
@@ -65,6 +84,13 @@ When the target arrow matches the reference arrow, the app automatically marks t
 6. When the target matches, show `SuccessFeedback` and advance to the next question.
 7. After five questions, show `CompletionScreen`.
 8. The child can tap `もういちど` to restart.
+
+### MVP Input Rules
+
+- The child taps to rotate the target arrow.
+- Do not add A/B/C answer buttons in the current MVP.
+- Do not add a submit button in the current MVP.
+- Do not require reading to make progress.
 
 ### MVP Screens
 
@@ -174,6 +200,14 @@ The structure should make Level 2, Level 3, and additional shape types easy to a
 ## Problem Types Planned for the Product
 
 The product will focus on visual-spatial problems where interaction adds clear learning value.
+
+### Priority Order
+
+- `P0`: Rotation
+- `P0.5`: Ferris Wheel / cyclic position tracking
+- `P1`: Mirror, Folding, Layering
+- `P2`: Water reflection, Shadow, Shape construction
+- `P3`: Dice net, Cross-section, Perspective / blocks
 
 ### Included Long-Term Problem Types
 
