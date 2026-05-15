@@ -10,9 +10,10 @@ import {
 } from './game/rotationLogic';
 import CompletionScreen from './screens/CompletionScreen';
 import GameScreen from './screens/GameScreen';
+import RotationBridgeScreen from './screens/RotationBridgeScreen';
 import StartScreen from './screens/StartScreen';
 
-type Screen = 'start' | 'playing' | 'complete';
+type Screen = 'start' | 'playing' | 'bridge' | 'complete';
 
 const sessionQuestions = getSessionQuestions(rotationQuestions, SESSION_QUESTION_COUNT);
 
@@ -88,7 +89,9 @@ export default function App() {
       <div className="app-orb app-orb--one" />
       <div className="app-orb app-orb--two" />
 
-      {screen === 'start' ? <StartScreen onStart={beginSession} /> : null}
+      {screen === 'start' ? (
+        <StartScreen onStart={beginSession} onBridgeStart={() => setScreen('bridge')} />
+      ) : null}
 
       {screen === 'playing' ? (
         <GameScreen
@@ -99,6 +102,10 @@ export default function App() {
           targetRotation={targetRotation}
           onTargetTap={handleTargetTap}
         />
+      ) : null}
+
+      {screen === 'bridge' ? (
+        <RotationBridgeScreen onBackToStart={() => setScreen('start')} />
       ) : null}
 
       {screen === 'complete' ? <CompletionScreen onReplay={handleReplay} /> : null}
