@@ -1,4 +1,4 @@
-import type { RotationDirection } from '../data/rotationQuestions';
+import type { RotationDirection, RotationQuestion } from '../data/rotationQuestions';
 
 export const SESSION_QUESTION_COUNT = 5;
 
@@ -22,7 +22,21 @@ export const isRotationMatch = (
   referenceRotation: RotationDirection,
 ) => rotation === referenceRotation;
 
-export const getNextQuestionIndex = (currentIndex: number, totalQuestions: number) => {
+export const getSessionQuestions = (
+  questions: readonly RotationQuestion[],
+  count: number = SESSION_QUESTION_COUNT,
+): readonly RotationQuestion[] => {
+  if (questions.length < count) {
+    throw new Error(`Expected at least ${count} rotation questions.`);
+  }
+
+  return questions.slice(0, count);
+};
+
+export const getNextQuestionIndex = (
+  currentIndex: number,
+  totalQuestions: number,
+): number | null => {
   if (currentIndex + 1 >= totalQuestions) {
     return null;
   }

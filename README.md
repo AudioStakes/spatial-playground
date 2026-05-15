@@ -6,6 +6,8 @@
 rotation game for children who match a target arrow to a reference arrow by rotating the
 target 90 degrees at a time.
 
+See [AGENTS.md](./AGENTS.md) for the coding-agent work rules that apply to this repository.
+
 ## MVP
 
 - Start screen
@@ -29,6 +31,9 @@ target 90 degrees at a time.
 - `npm run dev`
 - `npm run build`
 - `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+- `npm run check:all`
 
 ## Quality Checks
 
@@ -38,6 +43,8 @@ target 90 degrees at a time.
 - `npm run lint:fix`
 - `npm run check`
 - `npm run check:fix`
+
+CI runs `npm run check:all` on pull requests and pushes to `main`.
 
 Biome is the primary formatting and linting tool. ESLint is intentionally not part of this
 MVP anymore.

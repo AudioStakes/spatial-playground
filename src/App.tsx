@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { rotationQuestions } from './data/rotationQuestions';
 import type { RotationDirection } from './data/rotationQuestions';
 import {
   SESSION_QUESTION_COUNT,
   getNextQuestionIndex,
+  getSessionQuestions,
   isRotationMatch,
   rotateClockwise,
 } from './game/rotationLogic';
@@ -13,11 +14,7 @@ import StartScreen from './screens/StartScreen';
 
 type Screen = 'start' | 'playing' | 'complete';
 
-const sessionQuestions = rotationQuestions.slice(0, SESSION_QUESTION_COUNT);
-
-if (sessionQuestions.length < SESSION_QUESTION_COUNT) {
-  throw new Error(`Expected at least ${SESSION_QUESTION_COUNT} rotation questions.`);
-}
+const sessionQuestions = getSessionQuestions(rotationQuestions, SESSION_QUESTION_COUNT);
 
 export default function App() {
   const totalQuestions = sessionQuestions.length;
@@ -28,7 +25,7 @@ export default function App() {
   );
   const [isSuccessVisible, setIsSuccessVisible] = useState(false);
 
-  const currentQuestion = useMemo(() => sessionQuestions[questionIndex], [questionIndex]);
+  const currentQuestion = sessionQuestions[questionIndex];
 
   const resetSession = () => {
     setQuestionIndex(0);
