@@ -14,6 +14,11 @@ Do not add the following unless explicitly requested.
 - Level 2+ implementation
 - App Store packaging
 
+## Reference material rules
+
+- Do not copy, trace, or commit actual PDF pages, images, or problem text.
+- Keep the local PDFs as reference-only material outside the repository.
+
 ## Interaction non-goals
 
 - Penalties for incorrect intermediate rotations
@@ -23,11 +28,12 @@ Do not add the following unless explicitly requested.
 - Multiple-choice answer UI for the current Rotation Play MVP
 - Submit buttons for the current Rotation Play MVP
 - A/B/C answer UI in the current Rotation Play MVP
+- Any answer-selection UI in the current Rotation Play MVP
 
 Future direction:
 
-- The later Rotation Paper Bridge mode may explore A/B/C-style answering
-- That is not part of the current MVP
+- The later Rotation Paper Bridge mode may explore A/B/C-style answering.
+- That is not part of the current Rotation Play MVP.
 
 ## Technical non-goals
 
@@ -37,6 +43,7 @@ Future direction:
 - Databases
 - CMS
 - User accounts
+- Login
 - Automated Playwright E2E tests, unless explicitly requested
 
 ## Audio status
