@@ -30,6 +30,7 @@ Scope:
 - Allow touch to verify when needed
 - Keep the path open for later A/B/C paper-style answering
 - Bridge Stage 3-4 after Rotation Play is stable
+- See [Rotation Paper Bridge design spec](./docs/design/rotation-paper-bridge.md)
 
 Notes:
 
