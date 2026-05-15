@@ -8,9 +8,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
       <div className="hero-card">
         <p className="hero-card__eyebrow">くるっと まわして、ぴったり あわせよう</p>
         <h1 className="hero-card__title">くるっと むきを あわせよう</h1>
-        <p className="hero-card__copy">
-          やじるしを タップして、おてほんと おなじ むきにしよう
-        </p>
+        <p className="hero-card__copy">やじるしを タップして、おてほんと おなじ むきにしよう</p>
 
         <div className="hero-card__demo" aria-hidden="true">
           <div className="hero-card__demo-label">おてほん</div>

@@ -1,44 +1,38 @@
 import { useEffect, useMemo, useState } from 'react';
+import { rotationQuestions } from './data/rotationQuestions';
+import type { RotationDirection } from './data/rotationQuestions';
+import {
+  SESSION_QUESTION_COUNT,
+  getNextQuestionIndex,
+  isRotationMatch,
+  rotateClockwise,
+} from './game/rotationLogic';
 import CompletionScreen from './screens/CompletionScreen';
 import GameScreen from './screens/GameScreen';
 import StartScreen from './screens/StartScreen';
-import { rotationQuestions } from './data/rotationQuestions';
-import type { RotationDirection } from './data/rotationQuestions';
 
 type Screen = 'start' | 'playing' | 'complete';
 
-const rotateClockwise = (rotation: RotationDirection): RotationDirection => {
-  switch (rotation) {
-    case 0:
-      return 90;
-    case 90:
-      return 180;
-    case 180:
-      return 270;
-    case 270:
-      return 0;
-    default:
-      return 0;
-  }
-};
+const sessionQuestions = rotationQuestions.slice(0, SESSION_QUESTION_COUNT);
+
+if (sessionQuestions.length < SESSION_QUESTION_COUNT) {
+  throw new Error(`Expected at least ${SESSION_QUESTION_COUNT} rotation questions.`);
+}
 
 export default function App() {
-  const totalQuestions = rotationQuestions.length;
+  const totalQuestions = sessionQuestions.length;
   const [screen, setScreen] = useState<Screen>('start');
   const [questionIndex, setQuestionIndex] = useState(0);
   const [targetRotation, setTargetRotation] = useState<RotationDirection>(
-    rotationQuestions[0].initialRotation,
+    sessionQuestions[0].initialRotation,
   );
   const [isSuccessVisible, setIsSuccessVisible] = useState(false);
 
-  const currentQuestion = useMemo(
-    () => rotationQuestions[questionIndex],
-    [questionIndex],
-  );
+  const currentQuestion = useMemo(() => sessionQuestions[questionIndex], [questionIndex]);
 
   const resetSession = () => {
     setQuestionIndex(0);
-    setTargetRotation(rotationQuestions[0].initialRotation);
+    setTargetRotation(sessionQuestions[0].initialRotation);
     setIsSuccessVisible(false);
   };
 
@@ -59,23 +53,19 @@ export default function App() {
     const timeout = window.setTimeout(() => {
       setIsSuccessVisible(false);
 
-      if (questionIndex === totalQuestions - 1) {
+      const nextQuestionIndex = getNextQuestionIndex(questionIndex, totalQuestions);
+
+      if (nextQuestionIndex === null) {
         setScreen('complete');
         return;
       }
 
-      const nextIndex = questionIndex + 1;
-      setQuestionIndex(nextIndex);
-      setTargetRotation(rotationQuestions[nextIndex].initialRotation);
+      setQuestionIndex(nextQuestionIndex);
+      setTargetRotation(sessionQuestions[nextQuestionIndex].initialRotation);
     }, 900);
 
     return () => window.clearTimeout(timeout);
-  }, [
-    isSuccessVisible,
-    questionIndex,
-    screen,
-    totalQuestions,
-  ]);
+  }, [isSuccessVisible, questionIndex, screen, totalQuestions]);
 
   const handleTargetTap = () => {
     if (screen !== 'playing' || isSuccessVisible) {
@@ -85,7 +75,7 @@ export default function App() {
     setTargetRotation((rotation) => {
       const nextRotation = rotateClockwise(rotation);
 
-      if (nextRotation === currentQuestion.referenceRotation) {
+      if (isRotationMatch(nextRotation, currentQuestion.referenceRotation)) {
         setIsSuccessVisible(true);
       }
 
@@ -103,9 +93,7 @@ export default function App() {
       <div className="app-orb app-orb--one" />
       <div className="app-orb app-orb--two" />
 
-      {screen === 'start' ? (
-        <StartScreen onStart={beginSession} />
-      ) : null}
+      {screen === 'start' ? <StartScreen onStart={beginSession} /> : null}
 
       {screen === 'playing' ? (
         <GameScreen

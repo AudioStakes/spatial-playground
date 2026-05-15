@@ -23,7 +23,6 @@ export default function GameCanvas({
           <RotationScene
             question={question}
             targetRotation={targetRotation}
-            onTargetTap={onTargetTap}
             isSuccessVisible={isSuccessVisible}
           />
         </Canvas>
@@ -40,10 +39,11 @@ export default function GameCanvas({
           <button
             className={`game-card game-card--target${isSuccessVisible ? ' game-card--success' : ''}`}
             type="button"
-            onPointerDown={onTargetTap}
-            aria-label="ターゲットのやじるしをタップする"
+            onClick={onTargetTap}
+            disabled={isSuccessVisible}
+            aria-label="やじるしを 90ど まわす"
           >
-            <div className="game-card__title game-card__title--target">ここを タップ</div>
+            <div className="game-card__title game-card__title--target">90ど まわす</div>
             <div
               className="game-arrow game-arrow--target"
               style={{ transform: `rotate(${targetRotation}deg)` }}

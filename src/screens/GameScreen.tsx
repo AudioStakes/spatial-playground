@@ -1,6 +1,6 @@
 import ProgressIndicator from '../components/ProgressIndicator';
+import type { RotationDirection, RotationQuestion } from '../data/rotationQuestions';
 import GameCanvas from '../game/GameCanvas';
-import type { RotationQuestion, RotationDirection } from '../data/rotationQuestions';
 
 type GameScreenProps = {
   currentQuestion: RotationQuestion;

@@ -1,22 +1,20 @@
 import { RoundedBox } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
-import * as THREE from 'three';
-import type { RotationQuestion, RotationDirection } from '../data/rotationQuestions';
+import type * as THREE from 'three';
+import type { RotationDirection, RotationQuestion } from '../data/rotationQuestions';
 import ReferenceShape from './ReferenceShape';
 import TargetShape from './TargetShape';
 
 type RotationSceneProps = {
   question: RotationQuestion;
   targetRotation: RotationDirection;
-  onTargetTap: () => void;
   isSuccessVisible: boolean;
 };
 
 export default function RotationScene({
   question,
   targetRotation,
-  onTargetTap,
   isSuccessVisible,
 }: RotationSceneProps) {
   const targetGroup = useRef<THREE.Group>(null);
@@ -57,23 +55,12 @@ export default function RotationScene({
       </group>
 
       <group position={[2.3, 0.1, 0]} ref={targetGroup}>
-        <RoundedBox
-          args={[2.9, 3.8, 0.18]}
-          radius={0.28}
-          smoothness={6}
-          castShadow
-          receiveShadow
-          onPointerDown={(event) => {
-            event.stopPropagation();
-            onTargetTap();
-          }}
-        >
+        <RoundedBox args={[2.9, 3.8, 0.18]} radius={0.28} smoothness={6} castShadow receiveShadow>
           <meshStandardMaterial color={isSuccessVisible ? '#fff4dc' : '#fff0c6'} roughness={0.35} />
         </RoundedBox>
         <TargetShape
           shapeType={question.shapeType}
           rotation={targetRotation}
-          onTap={onTargetTap}
           isSuccessVisible={isSuccessVisible}
         />
       </group>
