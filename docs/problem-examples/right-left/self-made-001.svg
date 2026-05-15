@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made right-left example 1</title>
+  <desc id="desc">A friendly character faces forward with arrows showing left and right.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="60" y="50" width="680" height="400" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <circle cx="400" cy="180" r="44" fill="none" stroke="#1f4b99" stroke-width="8"/>
+  <path d="M400 224 V330" stroke="#1f4b99" stroke-width="8" stroke-linecap="round"/>
+  <path d="M350 270 L250 270" stroke="#d44a3a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M250 270 L270 258 L270 282 Z" fill="#d44a3a"/>
+  <path d="M450 270 L550 270" stroke="#5b8c3f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M550 270 L530 258 L530 282 Z" fill="#5b8c3f"/>
+  <path d="M400 330 L350 390 H450 Z" fill="none" stroke="#232323" stroke-width="6" stroke-linejoin="round"/>
+</svg>

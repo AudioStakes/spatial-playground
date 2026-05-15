@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made rotation reference</title>
+  <desc id="desc">Two paper-style panels show a reference arrow and a target arrow that can be rotated.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="40" y="40" width="320" height="420" rx="20" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <rect x="440" y="40" width="320" height="420" rx="20" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <path d="M170 350 L170 170 L135 205 L170 120 L205 205 L170 170" fill="none" stroke="#1f4b99" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M570 350 L570 170 L535 205 L570 120 L605 205 L570 170" fill="none" stroke="#d44a3a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" transform="rotate(90 570 250)"/>
+  <circle cx="170" cy="250" r="92" fill="none" stroke="#c7c7c0" stroke-width="3" stroke-dasharray="10 10"/>
+  <circle cx="570" cy="250" r="92" fill="none" stroke="#c7c7c0" stroke-width="3" stroke-dasharray="10 10"/>
+  <path d="M250 250 C285 220, 285 180, 250 150" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M250 150 L240 168 L260 166 Z" fill="#7b7b7b"/>
+  <path d="M640 150 C675 180, 675 220, 640 250" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M640 250 L630 232 L650 234 Z" fill="#7b7b7b"/>
+  <rect x="110" y="390" width="120" height="26" rx="13" fill="#1f4b99" opacity="0.12"/>
+  <rect x="510" y="390" width="120" height="26" rx="13" fill="#d44a3a" opacity="0.12"/>
+</svg>

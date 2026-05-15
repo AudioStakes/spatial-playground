@@ -25,9 +25,14 @@ Before starting work, read:
 - `docs/commands.md`
 - `docs/qa-checklist.md`
 - `docs/implementation-plan.md`
+- `docs/problem-references/README.md`
+- `docs/problem-references/target-problem-types.md`
+- `docs/problem-references/source-file-classification.md`
+- `docs/problem-examples/README.md`
 - `TASKS.md`
 
 Use these files to avoid re-deciding project scope, testing strategy, QA coverage, and validation commands.
+When designing a new game type, check `docs/problem-references/` and `docs/problem-examples/` first so the design stays aligned with the project taxonomy and avoids copying reference PDFs.
 
 ## Tech stack
 

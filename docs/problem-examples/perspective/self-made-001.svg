@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made perspective example 1</title>
+  <desc id="desc">A block arrangement is shown with front and top viewpoints.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="60" y="50" width="680" height="400" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <rect x="170" y="260" width="90" height="90" fill="none" stroke="#1f4b99" stroke-width="8"/>
+  <rect x="260" y="260" width="90" height="180" fill="none" stroke="#1f4b99" stroke-width="8"/>
+  <rect x="350" y="170" width="90" height="270" fill="none" stroke="#1f4b99" stroke-width="8"/>
+  <path d="M520 210 L650 210 L650 300 L520 300 Z" fill="none" stroke="#d44a3a" stroke-width="8"/>
+  <path d="M520 210 L560 170 L690 170 L650 210" fill="none" stroke="#d44a3a" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M520 300 L560 260 L690 260 L650 300" fill="none" stroke="#d44a3a" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M470 255 C500 255, 515 255, 560 255" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M560 255 L542 245 L544 265 Z" fill="#7b7b7b"/>
+</svg>

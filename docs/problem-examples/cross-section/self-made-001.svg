@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made cross-section example 1</title>
+  <desc id="desc">A block is shown with a cutting plane and the resulting slice.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="60" y="50" width="680" height="400" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <rect x="180" y="150" width="220" height="180" fill="none" stroke="#1f4b99" stroke-width="10"/>
+  <path d="M130 190 L430 280" fill="none" stroke="#d44a3a" stroke-width="8"/>
+  <path d="M430 280 L410 275 L416 255 Z" fill="#d44a3a"/>
+  <ellipse cx="560" cy="250" rx="90" ry="50" fill="none" stroke="#5b8c3f" stroke-width="10"/>
+  <path d="M490 250 C520 225, 600 225, 630 250" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M630 250 L612 240 L614 260 Z" fill="#7b7b7b"/>
+</svg>

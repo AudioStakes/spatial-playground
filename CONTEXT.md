@@ -5,6 +5,7 @@
 `spatial-playground` is a browser-game learning app for children preparing for elementary school entrance exams.
 
 The product focuses on visual-spatial problems where understanding improves by watching movement, manipulating objects directly, and observing how shapes or spatial relationships change.
+The long-term goal is to help children build the ability to solve elementary-school entrance exam paper problems, but the app should stay focused on problems that become clearer when they are moved, touched, rotated, folded, or viewed in 3D.
 
 ## Repository Direction
 
@@ -13,6 +14,7 @@ The product focuses on visual-spatial problems where understanding improves by w
 - React Three Fiber is the primary 3D implementation layer.
 - Three.js is used for low-level geometry and scene control when needed.
 - Playwright Interactive QA is required for functional and visual signoff.
+- Local sample PDFs are reference-only material. Keep the repository limited to abstracted analysis and self-made examples; do not retain copied PDF pages, images, or problem text.
 
 ## Core Experience
 

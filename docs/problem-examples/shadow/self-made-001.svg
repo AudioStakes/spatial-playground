@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made shadow example 1</title>
+  <desc id="desc">A simple object casts a visible shadow on a paper-like ground.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="70" y="60" width="660" height="380" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <circle cx="180" cy="140" r="22" fill="none" stroke="#f0b12b" stroke-width="8"/>
+  <path d="M180 160 L240 320 L310 320 L250 180 Z" fill="none" stroke="#1f4b99" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M350 340 L520 290 L560 330 L390 380 Z" fill="#c9c9c1" stroke="#7b7b7b" stroke-width="4"/>
+  <path d="M220 170 C260 195, 300 220, 350 250" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M350 250 L330 244 L338 264 Z" fill="#7b7b7b"/>
+</svg>

@@ -2,3 +2,7 @@ node_modules/
 dist/
 artifacts-*.png
 .DS_Store
+.local/
+reference-pdfs/
+docs/reference-pdfs/
+*.local.pdf

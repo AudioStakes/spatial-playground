@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made dot figure example 2</title>
+  <desc id="desc">A grid of dots supports a tracing task with multiple segments.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="60" y="50" width="680" height="400" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <path d="M220 330 L300 230 L380 230 L460 330" fill="none" stroke="#d44a3a" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="220" cy="330" r="9" fill="#232323"/>
+  <circle cx="300" cy="230" r="9" fill="#232323"/>
+  <circle cx="380" cy="230" r="9" fill="#232323"/>
+  <circle cx="460" cy="330" r="9" fill="#232323"/>
+  <circle cx="340" cy="150" r="9" fill="#232323"/>
+  <circle cx="500" cy="150" r="9" fill="#232323"/>
+  <path d="M500 150 L340 150" fill="none" stroke="#1f4b99" stroke-width="3" stroke-dasharray="8 8"/>
+</svg>

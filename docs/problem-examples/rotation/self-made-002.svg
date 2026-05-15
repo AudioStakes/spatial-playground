@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made rotation example 2</title>
+  <desc id="desc">A ring with three arrow markers suggests repeated turning and cyclic orientation tracking.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="50" y="50" width="700" height="400" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <circle cx="400" cy="250" r="110" fill="none" stroke="#c7c7c0" stroke-width="4"/>
+  <circle cx="400" cy="250" r="40" fill="none" stroke="#232323" stroke-width="3" stroke-dasharray="8 8"/>
+  <path d="M400 120 L400 70" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M400 70 L388 92 L412 92 Z" fill="#7b7b7b"/>
+  <path d="M485 300 L530 345" stroke="#1f4b99" stroke-width="10" stroke-linecap="round"/>
+  <path d="M530 345 L506 340 L522 324 Z" fill="#1f4b99"/>
+  <path d="M315 300 L270 345" stroke="#d44a3a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M270 345 L294 340 L278 324 Z" fill="#d44a3a"/>
+  <path d="M385 140 L430 185" stroke="#5b8c3f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M430 185 L406 180 L422 164 Z" fill="#5b8c3f"/>
+  <path d="M570 250 C600 220, 600 180, 570 150" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M570 150 L560 168 L580 166 Z" fill="#7b7b7b"/>
+</svg>

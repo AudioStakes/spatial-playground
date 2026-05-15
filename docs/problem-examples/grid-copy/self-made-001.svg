@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Self-made grid copy example 1</title>
+  <desc id="desc">A source grid pattern is shown next to an empty target grid.</desc>
+  <rect width="800" height="500" fill="#fbfbf7"/>
+  <rect x="60" y="50" width="680" height="400" rx="18" fill="#fff" stroke="#232323" stroke-width="4"/>
+  <g stroke="#c7c7c0" stroke-width="2">
+    <rect x="150" y="120" width="180" height="180" fill="none"/>
+    <path d="M210 120 V300 M270 120 V300 M150 180 H330 M150 240 H330"/>
+    <rect x="470" y="120" width="180" height="180" fill="none"/>
+    <path d="M530 120 V300 M590 120 V300 M470 180 H650 M470 240 H650"/>
+  </g>
+  <path d="M180 180 L210 210 L240 150" fill="none" stroke="#1f4b99" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="180" cy="180" r="8" fill="#232323"/>
+  <circle cx="210" cy="210" r="8" fill="#232323"/>
+  <circle cx="240" cy="150" r="8" fill="#232323"/>
+  <path d="M360 210 C390 210, 420 210, 450 210" fill="none" stroke="#7b7b7b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M450 210 L432 200 L434 220 Z" fill="#7b7b7b"/>
+</svg>
