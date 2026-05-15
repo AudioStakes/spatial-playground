@@ -6,6 +6,8 @@ The canonical paper-style reference deck now lives at:
 
 - `../problem-examples-deck.pptx`
 
+The canonical visual example is in the deck.
+
 Use them to think about:
 
 - axis-of-symmetry reasoning
