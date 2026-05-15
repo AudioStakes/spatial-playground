@@ -37,6 +37,12 @@ describe('rotationLogic', () => {
     expect(sessionQuestions).toEqual(rotationQuestions.slice(0, SESSION_QUESTION_COUNT));
   });
 
+  it('throws when there are fewer than 5 questions available', () => {
+    expect(() => getSessionQuestions(rotationQuestions.slice(0, 4))).toThrow(
+      'Expected at least 5 rotation questions.',
+    );
+  });
+
   it('advances to the next question until the last question', () => {
     expect(getNextQuestionIndex(0, 5)).toBe(1);
     expect(getNextQuestionIndex(3, 5)).toBe(4);

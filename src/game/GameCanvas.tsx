@@ -19,6 +19,8 @@ export default function GameCanvas({
   return (
     <div className="game-canvas-shell">
       <div className="game-canvas-shell__canvas">
+        {/* For the Rotation MVP, the HTML overlay button is the primary input surface.
+            The R3F scene stays visual-only here to avoid duplicate pointer events and keep accessibility simple. */}
         <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 0, 8.2], zoom: 90 }}>
           <RotationScene
             question={question}

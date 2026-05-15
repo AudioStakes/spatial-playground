@@ -448,10 +448,6 @@ button {
     padding: 16px;
   }
 
-  .game-canvas-shell__labels {
-    gap: 10px;
-  }
-
   .game-canvas-shell__canvas {
     min-height: 360px;
   }

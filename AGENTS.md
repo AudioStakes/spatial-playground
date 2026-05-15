@@ -133,3 +133,7 @@ When UI or layout changes are made:
 - Check desktop and mobile viewports.
 - Capture screenshot evidence when useful.
 - Include exploratory testing for repeated taps, restart flow, and mobile tap behavior.
+
+## Handoff
+
+- When your changes are complete and validation passes, create a git commit before handing the work back unless the user explicitly asks you not to.
