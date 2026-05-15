@@ -70,6 +70,7 @@ Use the Playwright Interactive Skill for browser QA after implementation.
 - `docs/implementation-plan.md` - near-term implementation plan
 - `docs/problem-references/` - abstracted reference analysis from local paper-problem PDFs
 - `docs/problem-examples/` - self-made paper-style examples for game design
+- `docs/design/` - implementation-ready design specs for upcoming bridge work
 - `docs/adr/README.md` - optional index for important decisions; add an ADR only when a decision needs a durable record
 - `TASKS.md` - ready and deferred tasks
 

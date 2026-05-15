@@ -27,6 +27,7 @@ Goals:
 - Prepare the app for later A/B/C-style paper answering.
 - Keep the interaction simple and visual.
 - Stay a transition mode, not a full new puzzle family.
+- See [Rotation Paper Bridge design spec](./design/rotation-paper-bridge.md).
 
 ## Phase 3: Interaction quality
 
