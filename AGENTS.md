@@ -29,6 +29,7 @@ Before starting work, read:
 - `docs/problem-references/target-problem-types.md`
 - `docs/problem-references/source-file-classification.md`
 - `docs/problem-examples/README.md`
+- `docs/problem-examples/problem-examples-deck.pptx`
 - `TASKS.md`
 
 Use these files to avoid re-deciding project scope, testing strategy, QA coverage, and validation commands.

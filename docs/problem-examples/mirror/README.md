@@ -2,6 +2,10 @@
 
 This folder contains self-made symmetry and mirror references for game design.
 
+The canonical paper-style reference deck now lives at:
+
+- `../problem-examples-deck.pptx`
+
 Use them to think about:
 
 - axis-of-symmetry reasoning

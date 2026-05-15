@@ -15,6 +15,9 @@ The long-term goal is to help children build the ability to solve elementary-sch
 - Three.js is used for low-level geometry and scene control when needed.
 - Playwright Interactive QA is required for functional and visual signoff.
 - Local sample PDFs are reference-only material. Keep the repository limited to abstracted analysis and self-made examples; do not retain copied PDF pages, images, or problem text.
+- Sample problems are maintained as a Presentations deck in `docs/problem-examples/problem-examples-deck.pptx`.
+- Actual PDFs remain local reference materials only; do not copy them into the repository.
+- Only self-made problems should be stored in the repository.
 
 ## Core Experience
 

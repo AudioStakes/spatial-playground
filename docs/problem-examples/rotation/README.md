@@ -2,6 +2,10 @@
 
 This folder contains self-made rotation references for game design.
 
+The canonical paper-style reference deck now lives at:
+
+- `../problem-examples-deck.pptx`
+
 Use them to think about:
 
 - arrow direction changes

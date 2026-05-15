@@ -2,7 +2,9 @@
 
 This directory contains self-made, paper-style reference examples.
 
-The files here are for design exploration only.
+The canonical paper-style examples are maintained as a presentation deck:
+
+- `problem-examples-deck.pptx`
 
 Rules:
 
@@ -10,8 +12,9 @@ Rules:
 - do not reuse third-party workbook text or figures
 - do not present these examples as actual exam questions
 - keep the examples abstract and reusable for game design
+- treat the presentation deck as the canonical reference for paper-style sample problems
 
-Each source-PDF family should have at least one self-made example, and families with varied patterns should have multiple examples so the design can see the range of the problem type.
+Legacy SVG examples, if any, are concept sketches only and should not be treated as canonical.
 
 Current example folders:
 

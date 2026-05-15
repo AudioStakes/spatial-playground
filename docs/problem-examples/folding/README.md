@@ -2,6 +2,10 @@
 
 This folder contains self-made folding and unfolding references for game design.
 
+The canonical paper-style reference deck now lives at:
+
+- `../problem-examples-deck.pptx`
+
 Use them to think about:
 
 - a paper sheet folding over an axis
