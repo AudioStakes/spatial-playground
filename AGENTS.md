@@ -15,6 +15,20 @@ The current MVP is a rotation game for children around 4-6 years old. The child 
 - One MVP session is 5 questions.
 - Do not add scores, timers, rankings, accounts, parent dashboards, or analytics unless explicitly requested.
 
+## Project guidance files
+
+Before starting work, read:
+
+- `CONTEXT.md`
+- `docs/non-goals.md`
+- `docs/testing.md`
+- `docs/commands.md`
+- `docs/qa-checklist.md`
+- `docs/implementation-plan.md`
+- `TASKS.md`
+
+Use these files to avoid re-deciding project scope, testing strategy, QA coverage, and validation commands.
+
 ## Tech stack
 
 - Vite

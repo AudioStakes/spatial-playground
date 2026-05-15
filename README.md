@@ -59,6 +59,17 @@ Use the Playwright Interactive Skill for browser QA after implementation.
 - Capture screenshot evidence
 - Include a short exploratory pass before signoff
 
+## Project guidance
+
+- `AGENTS.md` - instructions for Codex and coding agents
+- `CONTEXT.md` - product and MVP context
+- `docs/testing.md` - testing strategy
+- `docs/non-goals.md` - explicit non-goals
+- `docs/qa-checklist.md` - functional and visual QA checklist
+- `docs/commands.md` - validation commands
+- `docs/implementation-plan.md` - near-term implementation plan
+- `TASKS.md` - ready and deferred tasks
+
 ## Scope Exclusions
 
 - Scores
