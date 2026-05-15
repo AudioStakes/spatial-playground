@@ -9,11 +9,21 @@ type TargetShapeProps = {
 };
 
 function TargetShape({ shapeType, rotation, isSuccessVisible }: TargetShapeProps) {
-  const geometry = useMemo(() => createArrowGeometry(), []);
-
   if (shapeType !== 'arrow') {
     return null;
   }
+
+  return <ArrowTargetShape rotation={rotation} isSuccessVisible={isSuccessVisible} />;
+}
+
+function ArrowTargetShape({
+  rotation,
+  isSuccessVisible,
+}: {
+  rotation: RotationDirection;
+  isSuccessVisible: boolean;
+}) {
+  const geometry = useMemo(() => createArrowGeometry(), []);
 
   return (
     <group rotation={[0, 0, (rotation * Math.PI) / 180]}>

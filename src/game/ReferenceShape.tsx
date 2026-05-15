@@ -8,11 +8,15 @@ type ReferenceShapeProps = {
 };
 
 function ReferenceShape({ shapeType, rotation }: ReferenceShapeProps) {
-  const geometry = useMemo(() => createArrowGeometry(), []);
-
   if (shapeType !== 'arrow') {
     return null;
   }
+
+  return <ArrowReferenceShape rotation={rotation} />;
+}
+
+function ArrowReferenceShape({ rotation }: { rotation: RotationDirection }) {
+  const geometry = useMemo(() => createArrowGeometry(), []);
 
   return (
     <mesh

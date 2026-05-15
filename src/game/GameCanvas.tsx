@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import type { RotationDirection, RotationQuestion } from '../data/rotationQuestions';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 import RotationScene from './RotationScene';
 import SuccessFeedback from './SuccessFeedback';
 
@@ -16,12 +17,19 @@ export default function GameCanvas({
   isSuccessVisible,
   onTargetTap,
 }: GameCanvasProps) {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
-    <div className="game-canvas-shell">
+    <div className="game-canvas-shell" data-reduced-motion={prefersReducedMotion}>
       <div className="game-canvas-shell__canvas">
         {/* For the Rotation MVP, the HTML overlay button is the primary input surface.
             The R3F scene stays visual-only here to avoid duplicate pointer events and keep accessibility simple. */}
-        <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 0, 8.2], zoom: 90 }}>
+        <Canvas
+          shadows={!prefersReducedMotion}
+          dpr={[1, 1.5]}
+          frameloop={prefersReducedMotion ? 'demand' : 'always'}
+          camera={{ position: [0, 0, 8.2], zoom: 90 }}
+        >
           <RotationScene
             question={question}
             targetRotation={targetRotation}

@@ -69,15 +69,13 @@ export default function App() {
       return;
     }
 
-    setTargetRotation((rotation) => {
-      const nextRotation = rotateClockwise(rotation);
+    const nextRotation = rotateClockwise(targetRotation);
 
-      if (isRotationMatch(nextRotation, currentQuestion.referenceRotation)) {
-        setIsSuccessVisible(true);
-      }
+    setTargetRotation(nextRotation);
 
-      return nextRotation;
-    });
+    if (isRotationMatch(nextRotation, currentQuestion.referenceRotation)) {
+      setIsSuccessVisible(true);
+    }
   };
 
   const handleReplay = () => {
