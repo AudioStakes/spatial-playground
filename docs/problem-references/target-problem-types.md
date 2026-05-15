@@ -8,10 +8,13 @@ The common theme is that the child learns by seeing a transformation, manipulati
 
 The app should introduce problem families in this order:
 
-1. Stage 1: touch and understand
-2. Stage 2: match the example
-3. Stage 3: predict the result of a change
-4. Stage 4: answer in A/B/C or another paper-style format
+1. Stage 1: さわって理解
+2. Stage 2: お手本に合わせる
+3. Stage 3: 変化後を予想する
+4. Stage 4: ペーパー形式で選ぶ
+
+Stage 1-2 is Rotation Play.
+Stage 3-4 is the Rotation Paper Bridge.
 
 ## Priority Overview
 

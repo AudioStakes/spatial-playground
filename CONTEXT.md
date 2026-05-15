@@ -4,21 +4,23 @@
 
 `spatial-playground` is a browser-game learning app for children preparing for elementary school entrance exams.
 
-The product focuses on visual-spatial problems where understanding improves by watching movement, manipulating objects directly, and observing how shapes or spatial relationships change.
-The current app is not the paper problem itself. The current MVP is a Rotation Play game that helps children understand 90-degree rotation through touch before they move on to paper-style answering.
-The long-term goal is to help children build the ability to solve elementary-school entrance exam paper problems, but the app should stay focused on problems that become clearer when they are moved, touched, rotated, folded, or viewed in 3D.
+The current MVP is `Rotation Play`: a touch-first game where children tap an arrow to rotate it 90 degrees at a time and match a reference arrow.
+This is a pre-paper learning step, not a reproduction of the paper problem itself.
+The long-term goal is to help children build the ability to solve elementary-school entrance exam paper problems, while keeping the app focused on visual-spatial problems that become clearer when they are moved, touched, rotated, folded, layered, or viewed in 3D.
 
 ## Repository Direction
 
-- The current MVP is Rotation Play: touch an arrow and understand 90-degree rotation.
-- The next stage is Rotation Paper Bridge, which helps children predict what happens after one turn and prepares them for paper-style answering.
-- The product focuses on visual-spatial problems.
+- The current MVP is Rotation Play.
+- Rotation Play is the Stage 1-2 foundation for later paper-style reasoning, not a full paper-problem reproduction.
+- The staged progression is Stage 1 `さわって理解`, Stage 2 `お手本に合わせる`, Stage 3 `変化後を予想する`, and Stage 4 `ペーパー形式で選ぶ`.
+- The next step is Rotation Paper Bridge, which bridges Stage 3-4 and prepares children for paper-style answering.
+- The product focuses on visual-spatial problems only.
 - React Three Fiber is the primary 3D implementation layer.
 - Three.js is used for low-level geometry and scene control when needed.
 - Playwright Interactive QA is required for functional and visual signoff.
 - Local sample PDFs are reference-only material. Keep the repository limited to abstracted analysis and self-made examples; do not retain copied PDF pages, images, or problem text.
 - Sample problems are maintained as a Presentations deck in `docs/problem-examples/problem-examples-deck.pptx`.
-- Actual PDFs remain local reference materials only; do not copy them into the repository.
+- Actual PDFs remain local reference materials only; do not copy, trace, or commit them into the repository.
 - Only self-made problems should be stored in the repository.
 
 ## Core Experience
@@ -38,10 +40,15 @@ The experience should feel like a game, but the interaction should deepen unders
 
 The app should teach visual-spatial problems in this order:
 
-1. `Stage 1`: touch and understand.
-2. `Stage 2`: match the example.
-3. `Stage 3`: predict the result of a change.
-4. `Stage 4`: answer in A/B/C or another paper-style format.
+1. `Stage 1`: `さわって理解`
+2. `Stage 2`: `お手本に合わせる`
+3. `Stage 3`: `変化後を予想する`
+4. `Stage 4`: `ペーパー形式で選ぶ`
+
+Current MVP coverage:
+
+- Rotation Play covers Stage 1-2.
+- Rotation Paper Bridge will bridge Stage 3-4.
 
 ## Target Users
 
