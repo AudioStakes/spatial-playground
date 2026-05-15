@@ -6,7 +6,6 @@ export type RotationBridgeQuestion = {
   shapeType: 'arrow';
   startRotation: RotationDirection;
   turnCount: 1;
-  correctRotation: RotationDirection;
   responseMode: 'prediction';
   supportsTouchPreview: boolean;
 };
@@ -18,7 +17,6 @@ export const rotationBridgeQuestions = [
     shapeType: 'arrow',
     startRotation: 270,
     turnCount: 1,
-    correctRotation: 0,
     responseMode: 'prediction',
     supportsTouchPreview: true,
   },

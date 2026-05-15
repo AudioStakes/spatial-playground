@@ -29,6 +29,7 @@ export default function RotationBridgeCanvas({
 }: RotationBridgeCanvasProps) {
   const previewTargetRotation = previewRotation ?? startRotation;
   const revealRotation = resultRotation ?? correctRotation;
+  const canPreview = supportsTouchPreview && !isCommitted;
   const revealLabel =
     isCommitted && isCorrect === false
       ? 'こうなるよ'
@@ -42,7 +43,8 @@ export default function RotationBridgeCanvas({
         <button
           className={`bridge-card bridge-card--source${previewRotation !== null ? ' bridge-card--preview' : ''}`}
           type="button"
-          onClick={onPreviewTap}
+          onClick={canPreview ? onPreviewTap : undefined}
+          disabled={!canPreview}
           aria-label="はじめの やじるしを さわって たしかめる"
         >
           <div className="bridge-card__label">はじめ</div>
@@ -73,19 +75,21 @@ export default function RotationBridgeCanvas({
 
       {!isCommitted ? (
         <div className="bridge-canvas-shell__actions">
-          <button
-            className="secondary-button secondary-button--wide"
-            type="button"
-            onClick={onPreviewTap}
-          >
-            <span className="secondary-button__icon" aria-hidden="true">
-              👀
-            </span>
-            <span className="secondary-button__text">
-              <span className="secondary-button__label">たしかめる</span>
-              <span className="secondary-button__subtext">1かい まわすと？</span>
-            </span>
-          </button>
+          {supportsTouchPreview ? (
+            <button
+              className="secondary-button secondary-button--wide"
+              type="button"
+              onClick={onPreviewTap}
+            >
+              <span className="secondary-button__icon" aria-hidden="true">
+                👀
+              </span>
+              <span className="secondary-button__text">
+                <span className="secondary-button__label">たしかめる</span>
+                <span className="secondary-button__subtext">1かい まわすと？</span>
+              </span>
+            </button>
+          ) : null}
 
           <button className="primary-button primary-button--wide" type="button" onClick={onCommit}>
             これでいい

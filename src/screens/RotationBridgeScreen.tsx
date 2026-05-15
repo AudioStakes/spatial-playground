@@ -61,7 +61,7 @@ export default function RotationBridgeScreen({ onBackToStart }: RotationBridgeSc
   };
 
   const handlePreviewTap = () => {
-    if (result.committed) {
+    if (!question.supportsTouchPreview || result.committed) {
       return;
     }
 
