@@ -1,8 +1,9 @@
 type StartScreenProps = {
   onStart: () => void;
+  onBridgeStart: () => void;
 };
 
-export default function StartScreen({ onStart }: StartScreenProps) {
+export default function StartScreen({ onStart, onBridgeStart }: StartScreenProps) {
   return (
     <section className="screen screen--start" aria-label="スタート画面">
       <div className="hero-card">
@@ -20,6 +21,16 @@ export default function StartScreen({ onStart }: StartScreenProps) {
 
         <button className="primary-button" type="button" onClick={onStart}>
           はじめる
+        </button>
+
+        <button className="secondary-button" type="button" onClick={onBridgeStart}>
+          <span className="secondary-button__icon" aria-hidden="true">
+            ↻
+          </span>
+          <span className="secondary-button__text">
+            <span className="secondary-button__label">ためしてみる</span>
+            <span className="secondary-button__subtext">1かいまわす</span>
+          </span>
         </button>
       </div>
     </section>
