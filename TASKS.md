@@ -3,7 +3,7 @@
 ## Current priorities
 
 1. Keep Rotation Play MVP stable.
-2. Prepare Rotation Paper Bridge.
+2. Keep Rotation Paper Bridge mini-session stable.
 3. Keep quality checks fast and reliable.
 4. Add tests for pure game logic.
 5. Keep new puzzle families deferred until the bridge is stable.
@@ -22,12 +22,13 @@ Scope:
 
 ### Prepare Rotation Paper Bridge
 
-Status: ready
+Status: done
 
 Scope:
 
 - Predict what happens after one turn
 - Allow touch to verify when needed
+- Run a short multi-question bridge session with progress and replay
 - Keep the path open for later A/B/C paper-style answering
 - Bridge Stage 3-4 after Rotation Play is stable
 - See [Rotation Paper Bridge design spec](./docs/design/rotation-paper-bridge.md)

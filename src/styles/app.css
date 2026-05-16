@@ -513,6 +513,46 @@ button {
   font-weight: 700;
 }
 
+.bridge-progress {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(216, 241, 255, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(60, 92, 128, 0.08);
+}
+
+.bridge-progress__value {
+  color: #11517b;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.bridge-progress__dots {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bridge-progress__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(17, 81, 123, 0.18);
+}
+
+.bridge-progress__dot--done {
+  background: rgba(36, 152, 93, 0.42);
+}
+
+.bridge-progress__dot--active {
+  background: linear-gradient(180deg, #ffcf4d, #ff9f1f);
+  box-shadow: 0 0 0 4px rgba(255, 175, 42, 0.14);
+}
+
 .bridge-canvas-shell {
   display: grid;
   gap: 14px;
@@ -725,6 +765,10 @@ button {
   text-align: center;
 }
 
+.completion-card--bridge {
+  gap: 16px;
+}
+
 .completion-card__stamp {
   display: grid;
   place-items: center;
@@ -753,6 +797,13 @@ button {
   color: #305174;
   font-size: clamp(1.05rem, 2.2vw, 1.35rem);
   font-weight: 700;
+}
+
+.completion-card__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 420px);
 }
 
 @media (max-width: 720px) {
@@ -829,6 +880,15 @@ button {
     display: none;
   }
 
+  .bridge-progress {
+    gap: 6px;
+    padding: 8px 12px;
+  }
+
+  .bridge-progress__value {
+    font-size: 0.88rem;
+  }
+
   .bridge-panel__title {
     font-size: clamp(1.6rem, 7vw, 2.4rem);
   }
@@ -878,6 +938,11 @@ button {
 
   .bridge-card__hint {
     font-size: 0.76rem;
+  }
+
+  .completion-card__actions {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 }
 

@@ -17,7 +17,7 @@ Goals:
 
 ## Phase 2: Rotation Paper Bridge
 
-Status: next.
+Status: current / mini-session merged.
 
 Goals:
 
@@ -27,6 +27,7 @@ Goals:
 - Prepare the app for later A/B/C-style paper answering.
 - Keep the interaction simple and visual.
 - Stay a transition mode, not a full new puzzle family.
+- Present a short 3-5 question session with progress and replay.
 - See [Rotation Paper Bridge design spec](./design/rotation-paper-bridge.md).
 
 ## Phase 3: Interaction quality

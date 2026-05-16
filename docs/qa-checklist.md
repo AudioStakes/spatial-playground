@@ -13,6 +13,15 @@ Use this when UI, layout, or interaction behavior changes.
 - [ ] Five questions lead to the completion screen
 - [ ] Replay starts from question 1
 - [ ] Mobile tap works
+- [ ] Bridge start enters the mini-session
+- [ ] Bridge shows 3-5 question progress
+- [ ] Bridge prediction tap rotates exactly 90 degrees
+- [ ] Bridge preview works without committing
+- [ ] Bridge commit reveals correct or incorrect result calmly
+- [ ] Bridge advances to the next question after commit
+- [ ] Bridge completion appears after the final question
+- [ ] Bridge replay restarts from question 1
+- [ ] Bridge back button returns to StartScreen
 
 ## Visual QA
 
@@ -26,6 +35,9 @@ Use this when UI, layout, or interaction behavior changes.
 - [ ] Completion screen is readable
 - [ ] No important UI is hidden by overflow
 - [ ] No text or control overlaps
+- [ ] Bridge progress dots are visible and legible
+- [ ] Bridge completion screen shows both replay and start buttons
+- [ ] Bridge result screen shows the next-step button clearly
 
 ## Exploratory QA
 
