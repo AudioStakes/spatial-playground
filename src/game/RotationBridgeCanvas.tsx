@@ -71,7 +71,9 @@ export default function RotationBridgeCanvas({
       </div>
 
       {!isCommitted ? (
-        <div className="bridge-canvas-shell__actions">
+        <div
+          className={`bridge-canvas-shell__actions${supportsTouchPreview ? '' : ' bridge-canvas-shell__actions--single'}`}
+        >
           {supportsTouchPreview ? (
             <button
               className="secondary-button secondary-button--wide"
