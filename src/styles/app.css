@@ -537,6 +537,11 @@ button {
   cursor: pointer;
 }
 
+.bridge-card:disabled {
+  cursor: default;
+  opacity: 0.92;
+}
+
 .bridge-card--source {
   background: linear-gradient(180deg, #edf8ff, #e0f1ff);
 }
@@ -545,9 +550,7 @@ button {
   background: linear-gradient(180deg, #fff8df, #fff1c1);
 }
 
-.bridge-card--prediction:disabled,
 .bridge-card--locked {
-  opacity: 0.92;
   cursor: default;
 }
 
@@ -684,11 +687,6 @@ button {
   background: #16385f;
   color: #fff5cf;
   font-weight: 900;
-}
-
-.bridge-status--success {
-  background: linear-gradient(180deg, #2d9f62, #18814d);
-  color: #effff5;
 }
 
 .bridge-status__icon {

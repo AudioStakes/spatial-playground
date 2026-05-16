@@ -5,7 +5,6 @@ type RotationBridgeCanvasProps = {
   predictionRotation: RotationDirection;
   correctRotation: RotationDirection;
   previewRotation: RotationDirection | null;
-  resultRotation: RotationDirection | null;
   isCommitted: boolean;
   isCorrect: boolean | null;
   supportsTouchPreview: boolean;
@@ -19,7 +18,6 @@ export default function RotationBridgeCanvas({
   predictionRotation,
   correctRotation,
   previewRotation,
-  resultRotation,
   isCommitted,
   isCorrect,
   supportsTouchPreview,
@@ -28,7 +26,6 @@ export default function RotationBridgeCanvas({
   onCommit,
 }: RotationBridgeCanvasProps) {
   const previewTargetRotation = previewRotation ?? startRotation;
-  const revealRotation = resultRotation ?? correctRotation;
   const canPreview = supportsTouchPreview && !isCommitted;
   const revealLabel =
     isCommitted && isCorrect === false
@@ -109,7 +106,7 @@ export default function RotationBridgeCanvas({
             <div className="bridge-result__arrow-wrap">
               <div
                 className="game-arrow bridge-arrow bridge-arrow--result"
-                style={{ transform: `rotate(${revealRotation}deg)` }}
+                style={{ transform: `rotate(${correctRotation}deg)` }}
               />
             </div>
           </div>

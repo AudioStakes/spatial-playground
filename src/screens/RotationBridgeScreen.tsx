@@ -87,13 +87,6 @@ export default function RotationBridgeScreen({ onBackToStart }: RotationBridgeSc
     });
   };
 
-  const isSuccess = result.committed && result.correct === true;
-  const resultMessage = result.committed
-    ? result.correct
-      ? 'できたね！'
-      : 'もういちど みてみよう'
-    : '1かい まわしたら？';
-
   return (
     <section className="screen screen--bridge" aria-label="Rotation Paper Bridge 画面">
       <div className="bridge-panel">
@@ -108,7 +101,6 @@ export default function RotationBridgeScreen({ onBackToStart }: RotationBridgeSc
           predictionRotation={predictionRotation}
           correctRotation={correctRotation}
           previewRotation={previewRotation}
-          resultRotation={result.committed ? correctRotation : null}
           isCommitted={result.committed}
           isCorrect={result.correct}
           supportsTouchPreview={question.supportsTouchPreview}
@@ -119,11 +111,11 @@ export default function RotationBridgeScreen({ onBackToStart }: RotationBridgeSc
 
         <div className="bridge-panel__footer">
           {!result.committed ? (
-            <div className={`bridge-status${isSuccess ? ' bridge-status--success' : ''}`}>
+            <div className="bridge-status">
               <span className="bridge-status__icon" aria-hidden="true">
-                {isSuccess ? '★' : '↻'}
+                ↻
               </span>
-              <span className="bridge-status__text">{resultMessage}</span>
+              <span className="bridge-status__text">1かい まわしたら？</span>
             </div>
           ) : null}
 
