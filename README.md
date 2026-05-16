@@ -12,6 +12,7 @@ See [AGENTS.md](./AGENTS.md) for the coding-agent work rules that apply to this 
 
 - Start screen
 - 5-question rotation session
+- Rotation Paper Bridge mini-session for one-turn prediction
 - Automatic success when the target matches the reference
 - Completion screen with a restart flow
 

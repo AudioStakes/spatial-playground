@@ -13,7 +13,7 @@ The long-term goal is to help children build the ability to solve elementary-sch
 - The current MVP is Rotation Play.
 - Rotation Play is the Stage 1-2 foundation for later paper-style reasoning, not a full paper-problem reproduction.
 - The staged progression is Stage 1 `さわって理解`, Stage 2 `お手本に合わせる`, Stage 3 `変化後を予想する`, and Stage 4 `ペーパー形式で選ぶ`.
-- The next step is Rotation Paper Bridge, which bridges Stage 3-4 and prepares children for paper-style answering.
+- Rotation Paper Bridge bridges Stage 3-4 and prepares children for paper-style answering.
 - The product focuses on visual-spatial problems only.
 - React Three Fiber is the primary 3D implementation layer.
 - Three.js is used for low-level geometry and scene control when needed.
@@ -74,12 +74,12 @@ The child taps the target arrow to rotate it 90 degrees at a time.
 When the target arrow matches the reference arrow, the app automatically marks the question as correct and gives success feedback.
 This is a pre-paper bridge game, not a paper problem answering screen.
 
-### Next: Rotation Paper Bridge
+### Rotation Paper Bridge
 
-The next stage will bridge toward paper-style problems.
+This bridge mode moves toward paper-style problems.
 
 The child predicts what happens after one turn, and can touch to verify if needed.
-This mode prepares the app for later A/B/C-style paper answering, but it should still stay simple and visual.
+This mode prepares the app for later A/B/C-style paper answering, but it still stays simple and visual.
 
 ### MVP Session Flow
 

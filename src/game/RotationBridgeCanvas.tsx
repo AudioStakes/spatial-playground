@@ -1,32 +1,35 @@
+import type { RotationBridgeQuestion } from '../data/rotationBridgeQuestions';
 import type { RotationDirection } from '../data/rotationQuestions';
+import { getRotationAfterTurns } from './rotationBridgeLogic';
 
 type RotationBridgeCanvasProps = {
-  startRotation: RotationDirection;
+  question: RotationBridgeQuestion;
   predictionRotation: RotationDirection;
-  correctRotation: RotationDirection;
   previewRotation: RotationDirection | null;
   isCommitted: boolean;
   isCorrect: boolean | null;
-  supportsTouchPreview: boolean;
+  isFinalQuestion: boolean;
   onPredictionTap: () => void;
   onPreviewTap: () => void;
   onCommit: () => void;
+  onAdvanceQuestion: () => void;
 };
 
 export default function RotationBridgeCanvas({
-  startRotation,
+  question,
   predictionRotation,
-  correctRotation,
   previewRotation,
   isCommitted,
   isCorrect,
-  supportsTouchPreview,
+  isFinalQuestion,
   onPredictionTap,
   onPreviewTap,
   onCommit,
+  onAdvanceQuestion,
 }: RotationBridgeCanvasProps) {
-  const previewTargetRotation = previewRotation ?? startRotation;
-  const canPreview = supportsTouchPreview && !isCommitted;
+  const previewTargetRotation = previewRotation ?? question.startRotation;
+  const canPreview = question.supportsTouchPreview && !isCommitted;
+  const advanceLabel = isFinalQuestion ? 'おしまい' : 'つぎへ';
   const revealLabel =
     isCommitted && isCorrect === false
       ? 'こうなるよ'
@@ -46,7 +49,7 @@ export default function RotationBridgeCanvas({
         >
           <div className="bridge-card__label">はじめ</div>
           <div className="bridge-card__hint">
-            {supportsTouchPreview ? 'さわって たしかめる' : '1かい まわすと？'}
+            {question.supportsTouchPreview ? 'さわって たしかめる' : '1かい まわすと？'}
           </div>
           <div
             className="game-arrow bridge-arrow bridge-arrow--source"
@@ -72,9 +75,9 @@ export default function RotationBridgeCanvas({
 
       {!isCommitted ? (
         <div
-          className={`bridge-canvas-shell__actions${supportsTouchPreview ? '' : ' bridge-canvas-shell__actions--single'}`}
+          className={`bridge-canvas-shell__actions${question.supportsTouchPreview ? '' : ' bridge-canvas-shell__actions--single'}`}
         >
-          {supportsTouchPreview ? (
+          {question.supportsTouchPreview ? (
             <button
               className="secondary-button secondary-button--wide"
               type="button"
@@ -94,7 +97,17 @@ export default function RotationBridgeCanvas({
             これでいい
           </button>
         </div>
-      ) : null}
+      ) : (
+        <div className="bridge-canvas-shell__actions bridge-canvas-shell__actions--single">
+          <button
+            className="primary-button primary-button--wide"
+            type="button"
+            onClick={onAdvanceQuestion}
+          >
+            {advanceLabel}
+          </button>
+        </div>
+      )}
 
       <div className="bridge-result" aria-live="polite" aria-atomic="true">
         {isCommitted ? (
@@ -108,7 +121,9 @@ export default function RotationBridgeCanvas({
             <div className="bridge-result__arrow-wrap">
               <div
                 className="game-arrow bridge-arrow bridge-arrow--result"
-                style={{ transform: `rotate(${correctRotation}deg)` }}
+                style={{
+                  transform: `rotate(${getRotationAfterTurns(question.startRotation, question.turnCount)}deg)`,
+                }}
               />
             </div>
           </div>

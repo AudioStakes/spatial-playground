@@ -23,7 +23,7 @@ This mode should stay visually close to the current rotation flow, so the child 
 - Help children predict what happens after one turn.
 - Let children touch to confirm when they need support.
 - Keep the path open for later A/B/C-style paper answering.
-- Stay small enough that the first implementation can be a single question type.
+- Stay small enough that the first implementation can be a short mini-session.
 
 ## Non-goals
 
@@ -33,9 +33,9 @@ This mode should stay visually close to the current rotation flow, so the child 
 - Do not copy PDF images, workbook figures, or textbook wording.
 - Do not add React Testing Library or automated Playwright E2E tests for this docs slice.
 
-## Single-Question Flow
+## Mini-Session Flow
 
-The first implementation should be understandable as one complete question from start to feedback.
+The first implementation should be understandable as a short session from start to completion.
 
 ### What the child sees first
 
@@ -43,6 +43,7 @@ The first implementation should be understandable as one complete question from 
 - A paper-like answer area that is visually separate from the source.
 - A short visual prompt, ideally supported by a tiny amount of text such as `1回まわしたら？`, but never relying on text alone.
 - Large touch targets only.
+- A short progress indicator so the child can sense the session is moving forward.
 
 ### What the child thinks about
 
@@ -73,6 +74,7 @@ The first implementation should be understandable as one complete question from 
 - Correct prediction triggers immediate positive feedback.
 - Feedback should feel encouraging and obvious, such as a star, stamp, sparkle, or success motion.
 - The app should advance cleanly to the next step or the next question.
+- The session should end with a simple completion state and replay options.
 
 ## First Implementation Recommendation
 
@@ -88,6 +90,7 @@ Suggested shape of the interaction:
 - ask the child to predict the one-turn result
 - let the child touch to preview or confirm if needed
 - reveal the actual transformed arrow after the child commits
+- repeat this flow for a short set of questions before showing completion
 
 ### Why this is the better first step
 
@@ -115,7 +118,6 @@ export type RotationBridgeQuestion = {
   shapeType: 'arrow';
   startRotation: RotationDirection;
   turnCount: 1;
-  correctRotation: RotationDirection;
   responseMode: 'prediction';
   supportsTouchPreview: boolean;
 };
@@ -124,6 +126,7 @@ export type RotationBridgeQuestion = {
 Notes:
 
 - `turnCount` starts at `1` for the bridge.
+- `correctRotation` should stay derived from `startRotation` and `turnCount` rather than stored in the question data.
 - `responseMode` can stay narrow at first, but the shape should leave room for future choice-based rendering.
 - `supportsTouchPreview` marks the ability to replay or confirm the turn before answering.
 
@@ -136,18 +139,20 @@ This spec corresponds to the Rotation sample slide in `docs/problem-examples/pro
 - It must not be copied, traced, or turned into app assets.
 - The local PDFs are reference-only material, not source material for repo content.
 
-## Acceptance Criteria For Future Implementation
+## Acceptance Criteria For Current Bridge Mini-Session
 
-Issue #4 should satisfy the following before the bridge is considered implemented:
+Issue #7 should satisfy the following before the bridge is considered implemented:
 
-- The bridge question can be played end to end as one question.
+- The bridge session can be played end to end as a short mini-session.
 - The child first sees the source arrow and a clear prediction prompt.
 - The child can make a single prediction without needing to read letters.
 - The child can touch to preview or confirm the transformation if needed.
 - Correct predictions trigger immediate positive feedback.
 - Incorrect predictions are corrected gently without punishment.
 - The flow is clearly different from Rotation Play, because it asks for prediction rather than repeated matching taps.
+- Progress is visible during the session.
+- The session advances to the next question after commit and ends in a completion state.
+- Replay restarts the bridge from the first question.
 - The bridge remains a transition mode, not a new puzzle family.
 - No audio, score, timer, ranking, or parent dashboard is added.
 - The design remains compatible with later paper-style A/B/C rendering.
-
